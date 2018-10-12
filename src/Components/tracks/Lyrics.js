@@ -57,7 +57,11 @@ class Lyrics extends Component {
             <div className="card-body">
               <p className="card-text">{lyrics.lyrics_body}</p>
               <p>*This is a test and so not all lyrics are shown*</p>
-              <a href={track.track_share_url} rel="norefferer" target="_blank">
+              <a
+                href={track.track_share_url}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 Full Lyrics and details here
               </a>
             </div>
@@ -65,13 +69,6 @@ class Lyrics extends Component {
           <ul className="list-group mt-3">
             <li className="list-group-item">
               <strong>Album</strong>: {track.album_name}
-            </li>
-            <li className="list-group-item">
-              <strong>Genre</strong>:{" "}
-              {
-                track.primary_genres.music_genre_list[0].music_genre
-                  .music_genre_name
-              }
             </li>
             <li className="list-group-item">
               <strong>Explicit Content</strong>:{" "}
